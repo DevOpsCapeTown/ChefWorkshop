@@ -29,6 +29,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       if (servers["name"] == "webserver01")
         srv.vm.network "forwarded_port", guest: 8080, host: 8080
       end
+
+      if (servers["name"] == "chefserver")
+        srv.vm.provision "shell", inline: "wget -O /chef/chef-server-core_12.1.2-1_amd64.deb https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.1.2-1_amd64.deb"
+      end
     end
   end
 end
