@@ -1,0 +1,9 @@
+---
+- name: chefserver
+  box: ubuntu/trusty64
+  ram: 2048
+  ip: 172.17.8.101
+- name: webserver01
+  box: ubuntu/trusty64
+  ram: 256
+  ip: 172.17.8.102
