@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       end
 
       if (servers["name"] == "chefserver")
-        srv.vm.provision "shell", inline: "echo 'Downloading chef-server (400MB)'; date; wget --no-verbose -O /chef/chef-server-core_12.1.2-1_amd64.deb https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.1.2-1_amd64.deb"
+        srv.vm.provision "shell", inline: "echo 'Downloading chef-server (400MB), this may take a while...'; wget -c --no-verbose -O /chef/chef-server-core_12.1.2-1_amd64.deb https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.1.2-1_amd64.deb"
       end
     end
   end
