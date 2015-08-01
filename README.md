@@ -24,5 +24,7 @@ knife user list
 knife cookbook upload apache2
 knife cookbook upload website
 
+knife role from file /chef/roles/website.rb
+
 knife bootstrap 172.17.8.102 -N webserver01 -x vagrant -P vagrant --sudo -r website
 ```
